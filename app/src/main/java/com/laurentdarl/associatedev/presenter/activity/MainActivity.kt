@@ -1,8 +1,11 @@
 package com.laurentdarl.associatedev.presenter.activity
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toolbar
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -21,13 +24,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.mainToolbar)
 
-        val navHost = supportFragmentManager.findFragmentById(R.id.welcome_container) as NavHostFragment
+        val navHost =
+            supportFragmentManager.findFragmentById(R.id.welcome_container) as NavHostFragment
         val navController = navHost.navController
 
-        appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.signinFragment
-        ))
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.mainFragment
+            )
+        )
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.mainToolbar.setupWithNavController(navController, appBarConfiguration)
     }
+
+    override fun onSupportNavigateUp() = Navigation.findNavController(
+        this, R.id.welcome_container
+    ).navigateUp()
 }

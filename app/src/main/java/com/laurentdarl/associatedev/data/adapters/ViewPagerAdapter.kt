@@ -7,16 +7,20 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.laurentdarl.associatedev.presenter.fragments.registration.signin.SigninFragment
 import com.laurentdarl.associatedev.presenter.fragments.registration.signup.SignupFragment
 
-class ViewPagerAdapter (fm: FragmentManager, lifecycle: Lifecycle): FragmentStateAdapter(fm, lifecycle) {
+class ViewPagerAdapter (list: ArrayList<Fragment>, fm: FragmentManager, lifecycle: Lifecycle): FragmentStateAdapter(fm, lifecycle) {
+
+    private val fragmentList = list
+
     override fun getItemCount(): Int {
-        return 2
+        return fragmentList.size
     }
 
     override fun createFragment(position: Int): Fragment {
-        return when(position) {
-            0 -> SigninFragment()
-            1 -> SignupFragment()
-            else -> SigninFragment()
-        }
+        return fragmentList[position]
+//        return when(position) {
+//            0 -> SigninFragment()
+//            1 -> SignupFragment()
+//            else -> SigninFragment()
+//        }
     }
 }
