@@ -9,13 +9,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.datastore.core.DataStore
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.laurentdarl.associatedev.R
-import com.laurentdarl.associatedev.data.preferences.UserPreferences
+import com.laurentdarl.associatedev.data.models.UserDetails
+import com.laurentdarl.associatedev.data.persistence.preferences.UserPreferences
 import com.laurentdarl.associatedev.databinding.FragmentSigninBinding
-import com.laurentdarl.associatedev.domain.models.UserDetails
 import com.laurentdarl.associatedev.presenter.fragments.registration.WelcomeFragmentDirections
 import com.laurentdarl.associatedev.presenter.fragments.registration.signin.SigninFragment.SharedPref.EMAIL
 import com.laurentdarl.associatedev.presenter.fragments.registration.signin.SigninFragment.SharedPref.LOGGED_IN

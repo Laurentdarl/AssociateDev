@@ -1,4 +1,4 @@
-package com.laurentdarl.associatedev.data.preferences
+package com.laurentdarl.associatedev.data.persistence.preferences
 
 import android.content.Context
 import androidx.datastore.core.DataStore
@@ -6,7 +6,7 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import com.laurentdarl.associatedev.domain.models.UserDetails
+import com.laurentdarl.associatedev.data.models.UserDetails
 import kotlinx.coroutines.flow.map
 
     val Context.datastore: DataStore<Preferences> by preferencesDataStore("userData")

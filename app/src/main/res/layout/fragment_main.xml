@@ -38,4 +38,22 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tv_email"
         app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+    <Button
+        android:id="@+id/btn_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notifications"
+        app:layout_constraintEnd_toEndOf="@+id/btn_main"
+        app:layout_constraintStart_toStartOf="@+id/btn_main"
+        app:layout_constraintTop_toBottomOf="@+id/btn_main" />
+
+    <Button
+        android:id="@+id/btn_alarm_manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarm Manager"
+        app:layout_constraintEnd_toEndOf="@+id/btn_notification"
+        app:layout_constraintStart_toStartOf="@+id/btn_notification"
+        app:layout_constraintTop_toBottomOf="@+id/btn_notification" />
 </androidx.constraintlayout.widget.ConstraintLayout>

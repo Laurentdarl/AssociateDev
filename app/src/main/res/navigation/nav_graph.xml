@@ -31,10 +31,34 @@
         <action
             android:id="@+id/action_mainFragment_to_welcomeFragment"
             app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_alarmManagerFragment"
+            app:destination="@id/alarmManagerFragment" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.laurentdarl.associatedev.presenter.fragments.app.favorite.FavoriteFragment"
         android:label="fragment_favorite"
         tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.laurentdarl.associatedev.presenter.fragments.app.notifications.NotificationFragment"
+        android:label="Notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_notificationFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alarmManagerFragment"
+        android:name="com.laurentdarl.associatedev.presenter.fragments.app.alarms.AlarmManagerFragment"
+        android:label="Alarm Manager"
+        tools:layout="@layout/fragment_alarm_manager" >
+        <action
+            android:id="@+id/action_alarmManagerFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>
