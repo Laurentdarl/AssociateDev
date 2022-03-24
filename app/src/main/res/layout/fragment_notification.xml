@@ -13,7 +13,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Title"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -97,5 +97,14 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_send_notification"
         app:layout_constraintStart_toStartOf="@+id/btn_send_notification"
         app:layout_constraintTop_toBottomOf="@+id/btn_send_notification" />
+
+    <Button
+        android:id="@+id/btn_reply_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reply Notification"
+        app:layout_constraintEnd_toEndOf="@+id/btn_big_picture_notif"
+        app:layout_constraintStart_toStartOf="@+id/btn_big_picture_notif"
+        app:layout_constraintTop_toBottomOf="@+id/btn_big_picture_notif" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

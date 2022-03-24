@@ -10,21 +10,27 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:windowSoftInputMode="adjustResize"
-        android:theme="@style/Theme.AssociateDev">
-        <receiver android:name=".domain.notifications.LocalNotification" android:enabled="true" />
+        android:theme="@style/Theme.AssociateDev"
+        android:windowSoftInputMode="adjustResize">
+        <activity
+            android:name=".presenter.activity.RandomTestActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".domain.notifications.LocalNotification"
+            android:enabled="true" />
         <receiver android:name=".domain.notifications.AlarmManagers" />
 
         <activity
             android:name=".presenter.activity.MainActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

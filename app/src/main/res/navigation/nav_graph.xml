@@ -37,6 +37,12 @@
         <action
             android:id="@+id/action_mainFragment_to_alarmManagerFragment"
             app:destination="@id/alarmManagerFragment" />
+
+        <argument
+            android:name="jobId"
+            android:defaultValue="noJobId"
+            app:argType="string" />
+
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
